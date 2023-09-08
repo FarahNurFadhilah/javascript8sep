@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Java Script</title>
+</head>
+<body>
+    <div>
+        <h1 id="">Waktu</h1>
+        <button onclick="hallo()">
+            Klik
+        </button>
+        <button onclick="waktu()">
+            waktu
+        </button>
+
+        <br><br><br>
+        <input type="number"  id="bulan" placeholder="bulan">
+        <input type="number" id="tanggal" placeholder="tanggal">
+        <h1 id="zodiak">zodiak</h1>
+        <button onclick="zodiak()">Zodiak</button>
+
+        <div>
+        <h1 id="hasil">Hasil perkalian</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="kali()">Perkalian</button>
+        <button onclick="tambah()">Penambahan</button>
+        <button onclick="kurang()">Pengurangan</button>
+        <button onclick="bagi()">Pembagian</button>
+        </div>
+
+        
+    </div>
+    <script>
+        function hallo(){
+            alert("halo javascript");
+        }
+        function waktu(){
+            document.getElementById('waktu').innerHTML=Date();
+        }
+        function zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let zodiak="belum";
+
+            if(bulan==1){
+                if(tanggal>0 && tanggal<18){
+                    zodiak="gemini";
+                }
+
+                if(tanggal>17 && tanggal<32){
+                    zodiak="pisces";
+                }
+            }
+            if(bulan==2){
+                if(tanggal>0 && tanggal<19){
+                    zodiak="taurus";
+                }
+                if(tanggal>18 && tanggal<33){
+                    zodiak="sagitarius"
+                }
+            }
+            if(bulan==3){
+                if(tanggal>0 && tanggal<20){
+                    zodiak="leo";
+                }
+                if(tanggal>19 && tanggal<35){
+                    zodiak="virgo";
+                }
+            }
+            if(bulan==4){
+                if(tanggal>0 && tanggal<16){
+                    zodiak="scorpio";
+                }
+                if(tanggal>15 && tanggal<31){
+                    zodiak="cancer";
+                }
+            }
+            if(bulan==5){
+                if(tanggal>0 && tanggal<17){
+                    zodiak="capricorn";
+                }
+                if(tanggal>16 && tanggal<30){
+                    zodiak="aquarius";
+                }
+            }
+            if(bulan==6){
+                if(tanggal>0 && tanggal<18){
+                    zodiak="libra";
+                }
+                if(tanggal>17 && tanggal<30){
+                    zodiak="aries";
+                }
+            }
+            if(bulan==7){
+                if(tanggal>0 && tanggal<17){
+                    zodiak="muharram";
+                }
+                if(tanggal>16 && tanggal<31){
+                    zodiak="shafar";
+                }
+            }
+            if(bulan==8){
+                if(tanggal>0 && tanggal<16){
+                    zodiak="rabiul awal";
+                }
+                if(tanggal>15 && tanggal<32){
+                    zodiak="rabiul akhir";
+                }
+            }
+            if(bulan==9){
+                if(tanggal>0 && tanggal<14){
+                    zodiak="jumadal ula";
+                }
+                if(tanggal>13 && tanggal<39){
+                    zodiak="jumadal tsaniyah";
+                }
+            }
+            if(bulan==10){
+                if(tanggal>0 && tanggal <17){
+                    zodiak="rajab";
+                }
+                if(tanggal>16 && tanggal<38){
+                    zodiak="sya'ban";
+                }
+            }
+            if(bulan==11){
+                if(tanggal>0 && tanggal<18){
+                    zodiak="ramadhan";
+                }
+                if(tanggal>17 && tanggal<37){
+                    zodiak="syawal";
+                }
+            }
+            if(bulan==12){
+                if(tanggal>0 && tanggal<19){
+                    zodiak="dzul qo'da";
+                }
+                if(tanggal>18 && tanggal<36){
+                    zodiak="dzul hijja";
+                }
+            }
+           document.getElementById('zodiak').innerHTML=zodiak;
+        }
+        function kali(){
+           let a= document.getElementById('bil1').value;
+           let b=document.getElementById('bil2').value;
+           let Hasil=a*b;
+           document.getElementById('hasil').innerHTML=Hasil;
+        }
+        function tambah(){
+           let c=document.getElementById('bil1').value;
+           let d=document.getElementById('bil2').value;
+           let Hasil=parseInt(c)+parseInt(d);
+           document.getElementById('hasil').innerHTML=Hasil;
+        }
+        function kurang(){
+           let e=document.getElementById('bil1').value;
+           let f=document.getElementById('bil2').value;
+           let Hasil=e-f;
+           document.getElementById('hasil').innerHTML=Hasil;
+        }
+        function bagi(){
+            let g=document.getElementById('bil1').value;
+            let h=document.getElementById('bil2').value;
+            let Hasil=g/h;
+            document.getElementById('hasil').innerHTML=Hasil;
+        }
+    </script>
+</body>
+</html>
